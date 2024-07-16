@@ -1,5 +1,3 @@
-Here's a README file in Markdown format for your Python code. The README includes an overview, prerequisites, installation instructions, usage, and a license section:
-
 ```markdown
 # Real-time Speech-to-Text Translator
 
@@ -53,6 +51,4 @@ Once started, the application will guide you through an animated introduction. S
 
 To change the source or target language, modify the `language_code` and `target_language` parameters in the `listen_and_translate` function within the script.
 
-
-```
 
