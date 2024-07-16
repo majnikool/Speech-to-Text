@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+
+# Python files that should not be committed
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+
+# Environment secrets
+*.json
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
