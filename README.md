@@ -1,4 +1,3 @@
-```markdown
 # Real-time Speech-to-Text Translator
 
 This Python application utilizes Google Cloud's Speech-to-Text and Translation APIs to create a real-time speech translation system. The program captures audio input from the microphone, performs speech recognition, and then translates the recognized text into a specified target language. It features a console-based UI that updates dynamically to show the translation process in real-time.
