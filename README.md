@@ -1,50 +1,63 @@
-# Real-time Speech-to-Text Translator
+# Real-time Speech Translation with Google Cloud
 
-This Python application utilizes Google Cloud's Speech-to-Text and Translation APIs to create a real-time speech translation system. The program captures audio input from the microphone, performs speech recognition, and then translates the recognized text into a specified target language. It features a console-based UI that updates dynamically to show the translation process in real-time.
+This project provides a real-time speech translation system using Google Cloud's Speech-to-Text and Translation APIs, with a terminal interface for displaying live transcriptions and translations. The terminal interface is enhanced using the `curses` library to provide a more interactive and visually appealing user experience.
 
-## Prerequisites
+## Features
+- Real-time speech recognition using Google Cloud Speech-to-Text API.
+- Translation of recognized speech into a target language using Google Cloud Translation API.
+- Interactive terminal interface with introductory animations and live updates.
 
+## Requirements
 - Python 3.6+
-- PyAudio
-- Google Cloud Platform account
-- Enabled Google Speech-to-Text API
-- Enabled Google Translate API
-- API key for Google Cloud
+- Google Cloud SDK
+- `pyaudio` for audio stream handling
+- `curses` for terminal interface
+- `google-cloud-speech` and `google-cloud-translate` for Google Cloud services
+- `six` for compatibility
 
-## Installation
+## Setup
 
-1. **Clone the repository:**
+### Google Cloud Setup
+1. **Create a Google Cloud Project**:
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+   - Click on the project dropdown and create a new project.
 
-   ```bash
-   git clone https://github.com/yourusername/real-time-translator.git
-   cd real-time-translator
-   ```
+2. **Enable APIs**:
+   - In the Google Cloud Console, go to the API Library.
+   - Enable the [Cloud Speech-to-Text API](https://console.cloud.google.com/apis/library/speech.googleapis.com).
+   - Enable the [Cloud Translation API](https://console.cloud.google.com/apis/library/translate.googleapis.com).
 
-2. **Install dependencies:**
+3. **Set Up Authentication**:
+   - In the Google Cloud Console, go to the "IAM & Admin" section and click on "Service Accounts".
+   - Create a new service account and download the JSON key file.
+   - Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to point to this file:
 
-   Make sure you have Python installed, then run:
+    ```sh
+    export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-file.json"
+    ```
 
-   ```bash
-   pip install pyaudio google-cloud-speech google-cloud-translate six
-   ```
+### Python Environment
+- Install the required Python packages using pip:
 
-3. **Set up Google Cloud credentials:**
-
-   Place your Google Cloud credentials JSON file in the root directory of the project or specify its path in the environment variables:
-
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/credentials.json"
-   ```
+    ```sh
+    pip install pyaudio google-cloud-speech google-cloud-translate six
+    ```
 
 ## Usage
 
-To start the application, run:
+1. **Run the Script**:
+    - Execute the script from the terminal.
 
-```bash
-python -m curses_wrapper.py
-```
+    ```sh
+    python your_script_name.py
+    ```
 
-Once started, the application will guide you through an animated introduction. Speak into your microphone, and the translations will appear on your terminal screen. Press `q` to quit the application at any time.
+2. **Interactive Terminal**:
+    - The script will start with an introductory animation and then begin listening for speech input.
+    - Speak into the microphone, and the terminal will display the live transcription and translation.
+
+3. **Quit the Application**:
+    - Press `q` in the terminal to quit the application.
 
 ## Configuration
 
