@@ -40,7 +40,7 @@ This project provides a real-time speech translation system using Google Cloud's
 - Install the required Python packages using pip:
 
     ```sh
-    pip install pyaudio google-cloud-speech google-cloud-translate six
+    pip install -r requirements.txt
     ```
 
 ## Usage
@@ -49,7 +49,7 @@ This project provides a real-time speech translation system using Google Cloud's
     - Execute the script from the terminal.
 
     ```sh
-    python your_script_name.py
+    python speech-to-text.py
     ```
 
 2. **Interactive Terminal**:
